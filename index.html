@@ -1,14 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
-    <script src='main.js'></script>
+    <!---
+        INTRODUCTION
+    -->
+    <meta name="title" content="weatherio">
+    <meta name="description" content="Personal Portofolio Project created by Rizky Riyadi">
+
+     
+    <!---
+        - Link to Icon
+    -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    
+    <!--
+        Font
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!--
+        CSS and JS
+    -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/module.js" type="module"></script>
+    <script src="./assets/js/route.js" type="module"></script>
+
+
+    
 </head>
 <body>
-    
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./assets/images/logo.png" width="364" height="58" alt="logo">
+            </a>
+
+            <!-- Search View  -->
+            <div class="search-view" data-search-view="">
+
+                <div class="search-wrapper">
+                    <input type="search" name="search" placeholder="Search-City ..." autocomplete="off" class="search-field" data-search-field="">
+                </div>
+
+            </div>
+        </div>
+    </header>
 </body>
 </html>
