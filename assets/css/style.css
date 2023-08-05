@@ -15,28 +15,28 @@
 \*-----------------------------------*/
 :root {
   --primary: #B5A1E5; 
---on-primary: #100E17; 
---background: #131214;
---on-background: #EAE6F2;
---surface: #1D1C1F;
---on-surface: #DDDAE5;
---on-surface-variant: #7B7980; 
---on-surface-variant-2: #B9B6BF;
---outline: #3E3D40;
---bg-aqi-1: #89E589;
---on-bg-aqi-1: #1F331F;
---bg-aqi-2: #E5DD89;
---on-bg-aqi-2: #33311F;
---bg-aqi-3: #E5C089;
---on-bg-aqi-3: #332B1F;
---bg-aqi-4: #E58989;
---on-bg-aqi-4: #331F1F;
---bg-aqi-5: #E589B7;
---on-bg-aqi-5: #331F29;
---white: hsl(0, 0%, 100%);
---white-alpha-4: hsla(0, 0%, 100%, 0.04);
---white-alpha-8: hsla(0, 0%, 100%, 0.08);
---black-alpha-10: hsla(0, 0%, 0%, 0.1);
+  --on-primary: #100E17; 
+  --background: #131214;
+  --on-background: #EAE6F2;
+  --surface: #1D1C1F;
+  --on-surface: #DDDAE5;
+  --on-surface-variant: #7B7980; 
+  --on-surface-variant-2: #B9B6BF;
+  --outline: #3E3D40;
+  --bg-aqi-1: #89E589;
+  --on-bg-aqi-1: #1F331F;
+  --bg-aqi-2: #E5DD89;
+  --on-bg-aqi-2: #33311F;
+  --bg-aqi-3: #E5C089;
+  --on-bg-aqi-3: #332B1F;
+  --bg-aqi-4: #E58989;
+  --on-bg-aqi-4: #331F1F;
+  --bg-aqi-5: #E589B7;
+  --on-bg-aqi-5: #331F29;
+  --white: hsl(0, 0%, 100%);
+  --white-alpha-4: hsla(0, 0%, 100%, 0.04);
+  --white-alpha-8: hsla(0, 0%, 100%, 0.08);
+  --black-alpha-10: hsla(0, 0%, 0%, 0.1);
 
 /* Gradient Colors */
 --gradient-1: linear-gradient(180deg, hsla(270, 5%, 7%, 0) 0%, hsla(270, 5%, 7%, 0.8) 65%, hsl(270, 5%, 7%) 100%);
@@ -141,14 +141,14 @@ body {
   #MATERIAL ICON
 \*-----------------------------------*/
 @font-face {
-  font-family: ;
-  font-style: ;
-  font-weight: ;
-  src: url() format();
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/material-symbol-rounded.woff2) format('woff2');
 }
 
 .m-icon {
-  font-family: ;
+  font-family: 'Material Symbols Rounded';
   font-style: normal;
   font-weight: normal;
   font-size: 2.4rem;
@@ -160,7 +160,7 @@ body {
   direction: ltr;
   font-feature-settings: 'liga';
   -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing antialiased;
+  -webkit-font-smoothing: antialiased;
   height: lem;
   width: lem;
   overflow: hidden;
@@ -170,8 +170,80 @@ body {
 
 
 /*-----------------------------------*\
-  #REUSED STYLE
+  # Button, Background
 \*-----------------------------------*/
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 16px;
+}
+
+.icon-btn {
+  background-color: var(--white-alpha-8);
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  /* Make Button Rounded  */
+  border-radius: 17px;
+}
+
+/* State  */
+
+.has-state { position: relative;}
+.has-state:hover {box-shadow: var(--shadows-1);}
+.has-state:is(:focus, :focus-visible) {box-shadow: none;}
+
+.has-state::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  clip-path: circle(100% at 50% 50%);
+  transition: var(--transition-short);
+}
+
+.has-state:hover::before { background-color: var(--white-alpha-4);}
+
+.has-state:is(:focus, :focus-visible)::before {
+  background-color: var(--white-alpha-8);
+  animation: ripple 250ms ease forwards;
+}
+
+@keyframes ripple {
+  0% { clip-path: circle(0% at 50% 50%);}
+  100% {clip-path: circle(100% at 50% 50%);}
+}  
+
+/* Button Primary  */
+.btn-primary {
+ background-color: var(--primary);
+ color: var(--on-primary);
+ height: 48px;
+ line-height: 48px; 
+ max-width: max-content;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ padding-inline: 16px;
+ border-radius: 17px;
+}
+
+.btn-primary .span { font-weight: var(--weight-semiBold);}
+
+.btn-primary[disabled] {
+  background-color: var(--outline);
+  color: var(--on-surface-variant);
+  cursor: not-allowed;
+}
+
+.btn-primary[disabled]::before {display: none;}
+
+
+
+
+
 
 
 
