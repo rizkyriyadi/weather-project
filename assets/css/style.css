@@ -1,131 +1,111 @@
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
+/* variabel  */
 :root {
-  :root {
-    --primary: #B5A1E5; 
-    --on-primary: #100E17; 
-    --background: #131214;
-    --on-background: #EAE6F2;
-    --surface: #1D1C1F;
-    --on-surface: #DDDAE5;
-    --on-surface-variant: #7B7980; 
-    --on-surface-variant-2: #B9B6BF;
-    --outline: #3E3D40;
-    --bg-aqi-1: #89E589;
-    --on-bg-aqi-1: #1F331F;
-    --bg-aqi-2: #E5DD89;
-    --on-bg-aqi-2: #33311F;
-    --bg-aqi-3: #E5C089;
-    --on-bg-aqi-3: #332B1F;
-    --bg-aqi-4: #E58989;
-    --on-bg-aqi-4: #331F1F;
-    --bg-aqi-5: #E589B7;
-    --on-bg-aqi-5: #331F29;
-    --white: hsl(0, 0%, 100%);
-    --white-alpha-4: hsla(0, 0%, 100%, 0.04);
-    --white-alpha-8: hsla(0, 0%, 100%, 0.08);
-    --black-alpha-10: hsla(0, 0%, 0%, 0.1);
+  --primary: #B5A1E5; 
+  --on-primary: #100E17; 
+  --background: #131214;
+  --on-background: #EAE6F2;
+  --surface: #1D1C1F;
+  --on-surface: #DDDAE5;
+  --on-surface-variant: #7B7980; 
+  --on-surface-variant-2: #B9B6BF;
+  --outline: #3E3D40;
+  --bg-aqi-1: #89E589;
+  --on-bg-aqi-1: #1F331F;
+  --bg-aqi-2: #E5DD89;
+  --on-bg-aqi-2: #33311F;
+  --bg-aqi-3: #E5C089;
+  --on-bg-aqi-3: #332B1F;
+  --bg-aqi-4: #E58989;
+  --on-bg-aqi-4: #331F1F;
+  --bg-aqi-5: #E589B7;
+  --on-bg-aqi-5: #331F29;
+  --white: hsl(0, 0%, 100%);
+  --white-alpha-4: hsla(0, 0%, 100%, 0.04);
+  --white-alpha-8: hsla(0, 0%, 100%, 0.08);
+  --black-alpha-10: hsla(0, 0%, 0%, 0.1);
 
-    /* Gradient Color  */
-    --gradient-1: linear-gradient(180deg, hsla(270, 5%, 7%, 0) 0%, hsla(270, 5%, 7%, 0.8) 65%, hsl(270, 5%, 7%) 100%);
-    --gradient-2: linear-gradient(180deg, hsla(260, 5%, 12%, 0) 0%, hsla(260, 5%, 12%, 0.8) 65%, hsl(260, 5%, 12%) 100%);
+  /* Gradient Color  */
+  --gradient-1: linear-gradient(180deg, hsla(270, 5%, 7%, 0) 0%, hsla(270, 5%, 7%, 0.8) 65%, hsl(270, 5%, 7%) 100%);
+  --gradient-2: linear-gradient(180deg, hsla(260, 5%, 12%, 0) 0%, hsla(260, 5%, 12%, 0.8) 65%, hsl(260, 5%, 12%) 100%);
 
-    /* Typograpy  */
-    --ff-nunito-sans: 'Nunito Sans', sans-serif;
+  /* Typograpy  */
+  --ff-nunito-sans: 'Nunito Sans', sans-serif;
 
-    --heading: 5.6rem;
-    --title-1: 2rem;
-    --title-2: 1.8rem;
-    --title-3: 1.6rem;
-    --body-1: 2.2rem;
-    --body-2: 2rem;
-    --body-3: 1.6rem;
-    --label-1: 1.4rem;
-    --label-2: 1.2rem;
+  --heading: 5.6rem;
+  --title-1: 2rem;
+  --title-2: 1.8rem;
+  --title-3: 1.6rem;
+  --body-1: 2.2rem;
+  --body-2: 2rem;
+  --body-3: 1.6rem;
+  --label-1: 1.4rem;
+  --label-2: 1.2rem;
 
-    --weight-regular: 400;
-    --weight-semiBold: 600;
+  --weight-regular: 400;
+  --weight-semiBold: 600;
 
-    /* Shadow  */
-    --shadow-1: 0px 1px 3px hsla(0, 0%, 0%, 0.5);
-    --shadow-2: 0px 3px 6px hsla(0, 0%, 0%, 0.4);
+  /* Shadow  */
+  --shadow-1: 0px 1px 3px hsla(0, 0%, 0%, 0.5);
+  --shadow-2: 0px 3px 6px hsla(0, 0%, 0%, 0.4);
 
-    /* Border Radius  */
-    --radius-28: 28px;
-    --radius-16: 16px;
-    --radius-pill: 500px;
-    --radius-circle: 50%;
+  /* Border Radius  */
+  --radius-28: 28px;
+  --radius-16: 16px;
+  --radius-pill: 500px;
+  --radius-circle: 50%;
 
-    /* Transition  */
-    --transition-short: 100ms ease;
-
+  /* Transition  */
+  --transition-short: 100ms ease;
 }
 
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
 *,
 *::before,
-*::after {
+*::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
-/* li  */
+li { list-style: none; }
 
-li { list-style: none;}
 a,
-image,
+img,
 span,
 input,
-button {display: block;}
+button {display: block; }
 
-/* a  */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-
-/* Image  */
-image {
+img {
   height: auto;
 }
 
 input,
-
-/* Button */
 button {
   background: none;
   border: none;
   color: inherit;
   font: inherit;
-  cursor: pointer;
 }
 
-/* input  */
-input {width: 100%;}
+input { width:  100%; }
 
-/* sub  */
-sub {vertical-align: baseline;}
+button { cursor: pointer; }
 
-sup {vertical-align: top;}
+sub { vertical-align: baseline; }
 
-sub, sup {font-size: 0.75cm;}
+sub {vertical-align: top; }
 
-/* HTML  */
+sub, sup { font-size: 0.75cm; }
 
 html {
-  font-family: var();
+  font-family: var(--ff-nunito-sans);
   font-size: 10px;
   scroll-behavior: smooth;
 }
-
-/* body  */
 
 body {
   background-color: var(--background);
@@ -139,14 +119,11 @@ body {
   outline-offset: 2px;
 }
 
-/* SELECTION  */
-::selection {background-color: var(--white-alpha-8);}
+::selection { background-color: var(--white-alpha-8);}
 
-/* Web Kit ScrollBar  */
-
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 6px;
-  height: 6px;
+  height: 6px; 
 }
 
 ::-webkit-scrollbar-thumb {
@@ -154,11 +131,6 @@ body {
   border-radius: var(--radius-pill);
 }
 
-
-
-/*-----------------------------------*\
-  #MATERIAL ICON
-\*-----------------------------------*/
 @font-face {
   font-family: 'Material Symbols Rounded';
   font-style: normal;
@@ -168,8 +140,8 @@ body {
 
 .m-icon {
   font-family: 'Material Symbols Rounded';
-  font-style: normal;
   font-weight: normal;
+  font-style: normal;
   font-size: 2.4rem;
   line-height: 1;
   letter-spacing: normal;
@@ -177,20 +149,14 @@ body {
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  font-feature-settings: 'liga';
-  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'Liga';
+  -webkit-font-feature-settings: 'Liga';
   -webkit-font-smoothing: antialiased;
-  height: lem;
-  width: lem;
+  height: 1em;
+  width: 1em;
   overflow: hidden;
 }
 
-
-
-
-/*-----------------------------------*\
-  # Button, Background
-\*-----------------------------------*/
 .container {
   max-width: 1600px;
   width: 100%;
@@ -204,14 +170,12 @@ body {
   height: 48px;
   display: grid;
   place-items: center;
-  /* Make Button Rounded  */
   border-radius: var(--radius-circle);
 }
 
-/* State  */
+.has-state { position: relative; }
+.has-state:hover { box-shadow: var(--shadow-1);}
 
-.has-state { position: relative;}
-.has-state:hover {box-shadow: var(--shadows-1);}
 .has-state:is(:focus, :focus-visible) {box-shadow: none;}
 
 .has-state::before {
@@ -225,28 +189,29 @@ body {
 
 .has-state:hover::before { background-color: var(--white-alpha-4);}
 
+/* ripple  */
+
 .has-state:is(:focus, :focus-visible)::before {
   background-color: var(--white-alpha-8);
   animation: ripple 250ms ease forwards;
 }
 
 @keyframes ripple {
-  0% { clip-path: circle(0% at 50% 50%);}
+  0% {clip-path: circle(0% at 50% 50%);}
   100% {clip-path: circle(100% at 50% 50%);}
-}  
+}
 
-/* Button Primary  */
 .btn-primary {
- background-color: var(--primary);
- color: var(--on-primary);
- height: 48px;
- line-height: 48px; 
- max-width: max-content;
- display: flex;
- align-items: center;
- gap: 10px;
- padding-inline: 16px;
- border-radius: 17px;
+  background-color: var(--primary);
+  color: var(--on-primary);
+  height: 48px;
+  line-height: 48px;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-inline: 16px;
+  border-radius: var(--radius-pill);
 }
 
 .btn-primary .span { font-weight: var(--weight-semiBold);}
@@ -259,110 +224,21 @@ body {
 
 .btn-primary[disabled]::before {display: none;}
 
+.search-view,
+.header .btn-primary .span { display: none; }
 
+.logo img { width: 150px; }
 
-
-
-
-
-
-
-
-/* -----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
-.search-result .btn-primary .span {display: none;}
-/* state london  */
-/* .item-title { display: none;} */
-
-/* Size Logo  */
-.logo img {width: 200px;; height: 40px;}
-
-.header .container {
+.header .container,
+.header-actions {
   display: flex;
   align-items: center;
 }
 
-.header .container { justify-content: space-between; }
-.header-actions { gap: 16px;}
-.header .btn-primary { padding-inline: 12px;}
+.header .container { justify-content: space-between;}
 
-.search-view {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* For Mobile Browser */
-  height: 100svh;  
-  background-color: var(--surface);
-  color: var(--on-surface);
-  clip-path: circle(4% at calc(100 - 102px) 5%);
-  opacity: 0;
-  visibility: hidden;
-  z-index: 4;
-  transition: clip-path 500ms ease;
-}
+.header-actions {gap: 16px;}
 
-.search-view.active {
-  opacity: 1;
-  visibility: visible;
-  clip-path: circle(130% at 73% 5%);
-}
+.header .btn-primary {padding-inline: 12px;}
 
-/*-----------------------------------*\
-  #CURRENT WEATHER
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #HIGHLIGHTS
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #HOURLY FORECAST
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #FORECAST
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #LOADING
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #ERROR SECTION
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
-
-
-
-
-}
+/* Menit 32  */
