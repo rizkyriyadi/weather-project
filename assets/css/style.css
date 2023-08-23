@@ -274,6 +274,12 @@ body {
 
 .label-2 { font-size: var(--label-2);}
 
+.fade-in { animation: fade-in 250ms ease forwards;}
+
+@keyframes fade-in {
+  0% { opacity: 0;}
+  100% {opacity: 1;}
+} 
 
 
 /* HEADER  */
@@ -884,4 +890,10 @@ article.container::before {
 
 @media (min-width: 1400px) {
   .highlight-list { grid-template-columns: repeat(4, 1fr);}
+  
+}
+
+/* quality index  */
+.sub {
+  font-size: 20px;
 }
